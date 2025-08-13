@@ -4,7 +4,6 @@ drop table if exists flight;
 CREATE TABLE flight (
   id bigint PRIMARY KEY AUTO_INCREMENT,
   passenger_id varchar(20) NOT NULL,
-  departure_airport varchar(10),
   arrival_airport varchar(10),
   departure_date date,
   flight_status varchar(50) NOT NULL,
@@ -34,7 +33,5 @@ CREATE TABLE passenger (
 );
 
 ALTER TABLE flight ADD FOREIGN KEY (passenger_id) REFERENCES passenger (passenger_id);
-
-ALTER TABLE  flight ADD FOREIGN KEY (departure_airport) REFERENCES airport (airport_code);
 
 ALTER TABLE flight ADD FOREIGN KEY (arrival_airport) REFERENCES airport (airport_code);
