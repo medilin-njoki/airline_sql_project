@@ -35,3 +35,4 @@ CREATE TABLE passenger (
 ALTER TABLE flight ADD FOREIGN KEY (passenger_id) REFERENCES passenger (passenger_id);
 
 ALTER TABLE flight ADD FOREIGN KEY (arrival_airport) REFERENCES airport (airport_code);
+
